@@ -1,0 +1,33 @@
+{
+  "name": "biztalk-esb-viewer",
+  "displayName": "BizTalk ESB Viewer",
+  "description": "Inspect exported BizTalk ESB itinerary and configuration XML in VS Code.",
+  "version": "0.1.0",
+  "publisher": "lambogenius",
+  "license": "MIT",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Visualization"],
+  "main": "extension.cjs",
+  "activationEvents": [
+    "onCustomEditor:biztalkEsbViewer.editor",
+    "onCommand:biztalkEsbViewer.open"
+  ],
+  "contributes": {
+    "commands": [{ "command": "biztalkEsbViewer.open", "title": "BizTalk: Open ESB Viewer" }],
+    "customEditors": [{
+      "viewType": "biztalkEsbViewer.editor",
+      "displayName": "BizTalk ESB Viewer",
+      "selector": [{ "filenamePattern": "*.xml" }, { "filenamePattern": "*.esb" }],
+      "priority": "option"
+    }]
+  },
+  "files": ["extension.cjs", "media/**", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test",
+    "package": "npm run build && npx @vscode/vsce package --allow-missing-repository --out artifacts/biztalk-esb-viewer.vsix",
+    "prepackage:vsix": "npm run build",
+    "package:vsix": "npx @vscode/vsce package --allow-missing-repository --out artifacts/biztalk-esb-viewer.vsix",
+    "reinstall:extension": "node scripts/reinstall-extension.js"
+  }
+}
