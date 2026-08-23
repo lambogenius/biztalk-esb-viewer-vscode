@@ -1,5 +1,7 @@
 # BizTalk ESB Viewer
 
+[![Source on GitHub](https://img.shields.io/badge/source-GitHub-181717?logo=github)](https://github.com/lambogenius/biztalk-esb-viewer-vscode)
+
 A local-first, read-only VS Code custom editor for exported BizTalk ESB itinerary and configuration XML.
 
 ## Features
@@ -11,6 +13,8 @@ A local-first, read-only VS Code custom editor for exported BizTalk ESB itinerar
 - Keeps ESB definitions local; the extension makes no network calls.
 
 ## Install locally
+
+Source code: [GitHub repository](https://github.com/lambogenius/biztalk-esb-viewer-vscode)
 
 ```powershell
 npm run package:vsix

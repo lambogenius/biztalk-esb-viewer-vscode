@@ -4,6 +4,13 @@
   "description": "Inspect exported BizTalk ESB itinerary and configuration XML in VS Code.",
   "version": "0.1.0",
   "publisher": "lambogenius",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lambogenius/biztalk-esb-viewer-vscode.git"
+  },
+  "homepage": "https://github.com/lambogenius/biztalk-esb-viewer-vscode#readme",
+  "bugs": { "url": "https://github.com/lambogenius/biztalk-esb-viewer-vscode/issues" },
   "license": "MIT",
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Visualization"],
